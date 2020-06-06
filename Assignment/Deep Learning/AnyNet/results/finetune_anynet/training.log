@@ -1,0 +1,81 @@
+[2020-06-06 08:55:35 KITTIloader2015.py:33] INFO     [ 82 197 182 107 171 104  64  36  38  86 122 180 161 159  63 198 128  24
+ 157 119 185 174 132 196 187  68 117 167  75  83 139 179 181 169  84 164
+  26 125 154   9]
+[2020-06-06 08:55:35 finetune.py:81] INFO     channels_3d: 4
+[2020-06-06 08:55:35 finetune.py:81] INFO     datapath: dataset/data_scene_flow/training/
+[2020-06-06 08:55:35 finetune.py:81] INFO     datatype: 2015
+[2020-06-06 08:55:35 finetune.py:81] INFO     epochs: 300
+[2020-06-06 08:55:35 finetune.py:81] INFO     evaluate: False
+[2020-06-06 08:55:35 finetune.py:81] INFO     growth_rate: [4, 1, 1]
+[2020-06-06 08:55:35 finetune.py:81] INFO     init_channels: 1
+[2020-06-06 08:55:35 finetune.py:81] INFO     layers_3d: 4
+[2020-06-06 08:55:35 finetune.py:81] INFO     loss_weights: [0.25, 0.5, 1.0, 1.0]
+[2020-06-06 08:55:35 finetune.py:81] INFO     lr: 0.0005
+[2020-06-06 08:55:35 finetune.py:81] INFO     max_disparity: 192
+[2020-06-06 08:55:35 finetune.py:81] INFO     maxdisp: 192
+[2020-06-06 08:55:35 finetune.py:81] INFO     maxdisplist: [12, 3, 3]
+[2020-06-06 08:55:35 finetune.py:81] INFO     nblocks: 2
+[2020-06-06 08:55:35 finetune.py:81] INFO     pretrained: checkpoint/sceneflow/sceneflow.tar
+[2020-06-06 08:55:35 finetune.py:81] INFO     print_freq: 5
+[2020-06-06 08:55:35 finetune.py:81] INFO     resume: None
+[2020-06-06 08:55:35 finetune.py:81] INFO     save_path: results/finetune_anynet
+[2020-06-06 08:55:35 finetune.py:81] INFO     split_file: None
+[2020-06-06 08:55:35 finetune.py:81] INFO     spn_init_channels: 8
+[2020-06-06 08:55:35 finetune.py:81] INFO     start_epoch_for_spn: 121
+[2020-06-06 08:55:35 finetune.py:81] INFO     test_bsize: 8
+[2020-06-06 08:55:35 finetune.py:81] INFO     train_bsize: 6
+[2020-06-06 08:55:35 finetune.py:81] INFO     with_spn: True
+[2020-06-06 09:38:01 KITTIloader2015.py:33] INFO     [ 71  88 123  57 114  50 192  80   4   9 163  24  11  69 127  91 139 138
+  46  83 197 157  97  10  13 147  54  79 153  40 145 116 149  23 117 146
+  14 170 142 183]
+[2020-06-06 09:38:01 finetune.py:81] INFO     channels_3d: 4
+[2020-06-06 09:38:01 finetune.py:81] INFO     datapath: dataset/data_scene_flow/training/
+[2020-06-06 09:38:01 finetune.py:81] INFO     datatype: 2015
+[2020-06-06 09:38:01 finetune.py:81] INFO     epochs: 300
+[2020-06-06 09:38:01 finetune.py:81] INFO     evaluate: False
+[2020-06-06 09:38:01 finetune.py:81] INFO     growth_rate: [4, 1, 1]
+[2020-06-06 09:38:01 finetune.py:81] INFO     init_channels: 1
+[2020-06-06 09:38:01 finetune.py:81] INFO     layers_3d: 4
+[2020-06-06 09:38:01 finetune.py:81] INFO     loss_weights: [0.25, 0.5, 1.0, 1.0]
+[2020-06-06 09:38:01 finetune.py:81] INFO     lr: 0.0005
+[2020-06-06 09:38:01 finetune.py:81] INFO     max_disparity: 192
+[2020-06-06 09:38:01 finetune.py:81] INFO     maxdisp: 192
+[2020-06-06 09:38:01 finetune.py:81] INFO     maxdisplist: [12, 3, 3]
+[2020-06-06 09:38:01 finetune.py:81] INFO     nblocks: 2
+[2020-06-06 09:38:01 finetune.py:81] INFO     pretrained: checkpoint/sceneflow/sceneflow.tar
+[2020-06-06 09:38:01 finetune.py:81] INFO     print_freq: 5
+[2020-06-06 09:38:01 finetune.py:81] INFO     resume: None
+[2020-06-06 09:38:01 finetune.py:81] INFO     save_path: results/finetune_anynet
+[2020-06-06 09:38:01 finetune.py:81] INFO     split_file: None
+[2020-06-06 09:38:01 finetune.py:81] INFO     spn_init_channels: 8
+[2020-06-06 09:38:01 finetune.py:81] INFO     start_epoch_for_spn: 121
+[2020-06-06 09:38:01 finetune.py:81] INFO     test_bsize: 8
+[2020-06-06 09:38:01 finetune.py:81] INFO     train_bsize: 6
+[2020-06-06 09:38:01 finetune.py:81] INFO     with_spn: True
+[2020-06-06 09:38:26 KITTIloader2015.py:33] INFO     [112  18   5  74  38  41  92  78  55 150 199  77  27  65 175  91  23   1
+  88  57 185  42 138  47 165 179  94 182 145 127   0  45 111 133 151  24
+  28 137 147 172]
+[2020-06-06 09:38:26 finetune.py:81] INFO     channels_3d: 4
+[2020-06-06 09:38:26 finetune.py:81] INFO     datapath: dataset/data_scene_flow/training/
+[2020-06-06 09:38:26 finetune.py:81] INFO     datatype: 2015
+[2020-06-06 09:38:26 finetune.py:81] INFO     epochs: 300
+[2020-06-06 09:38:26 finetune.py:81] INFO     evaluate: False
+[2020-06-06 09:38:26 finetune.py:81] INFO     growth_rate: [4, 1, 1]
+[2020-06-06 09:38:26 finetune.py:81] INFO     init_channels: 1
+[2020-06-06 09:38:26 finetune.py:81] INFO     layers_3d: 4
+[2020-06-06 09:38:26 finetune.py:81] INFO     loss_weights: [0.25, 0.5, 1.0, 1.0]
+[2020-06-06 09:38:26 finetune.py:81] INFO     lr: 0.0005
+[2020-06-06 09:38:26 finetune.py:81] INFO     max_disparity: 192
+[2020-06-06 09:38:26 finetune.py:81] INFO     maxdisp: 192
+[2020-06-06 09:38:26 finetune.py:81] INFO     maxdisplist: [12, 3, 3]
+[2020-06-06 09:38:26 finetune.py:81] INFO     nblocks: 2
+[2020-06-06 09:38:26 finetune.py:81] INFO     pretrained: checkpoint/sceneflow/sceneflow.tar
+[2020-06-06 09:38:26 finetune.py:81] INFO     print_freq: 5
+[2020-06-06 09:38:26 finetune.py:81] INFO     resume: None
+[2020-06-06 09:38:26 finetune.py:81] INFO     save_path: results/finetune_anynet
+[2020-06-06 09:38:26 finetune.py:81] INFO     split_file: None
+[2020-06-06 09:38:26 finetune.py:81] INFO     spn_init_channels: 8
+[2020-06-06 09:38:26 finetune.py:81] INFO     start_epoch_for_spn: 121
+[2020-06-06 09:38:26 finetune.py:81] INFO     test_bsize: 8
+[2020-06-06 09:38:26 finetune.py:81] INFO     train_bsize: 6
+[2020-06-06 09:38:26 finetune.py:81] INFO     with_spn: False
