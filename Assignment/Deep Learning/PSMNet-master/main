@@ -1,0 +1,53 @@
+import numpy as np
+from PIL import Image
+import os
+from KITTIloader2015 import dataloader
+from KITTIloader2015 import compute_depth_metrics_i
+import matplotlib.pyplot as plt
+import cv2
+# import Test_img
+
+
+if __name__ == '__main__':
+    # left_train, right_train, disp_train_L = dataloader('./Training/')
+    # index = 0
+    filepath = './Training/'
+    left_fold = 'image_2/'
+    right_fold = 'image_3/'
+    disp_L = 'disp_occ_0/'
+    disp_R = 'disp_occ_1/'
+    left_test = []
+    rigth_test = []
+    disp_L_test = []
+
+    image = [img for img in os.listdir(filepath + left_fold) if img.find('_10') > -1]
+    # print(len(left_train))
+    index = 0
+    for img in image:
+        left_path = os.path.join(filepath, left_fold, img)
+        right_path = os.path.join(filepath, right_fold, img)
+        disp_path = os.path.join(filepath, disp_L, img)
+    # for index in range(0,len(left_train)):
+    #     img1 = right_train[index]
+    #     img = left_train[index]
+        # # print(img)
+        # plt.figure()
+        # plt.axis('off')
+        # plt.imshow(img, cmap='gray')
+        # # plt.scatter(x=coord[:, 0], y=coord[:, 1], marker='x', c='b', s=20)
+        # plt.show()
+        # plt.figure()
+        # plt.axis('off')
+        # plt.imshow(disp_train_L[index], cmap='gray')
+        # # plt.scatter(x=coord[:, 0], y=coord[:, 1], marker='x', c='b', s=20)
+        # plt.show()
+        # cv2.imshow('image_left', img)
+        # cv2.imshow('image_right', img1)
+
+        im = cv2.imread(disp_path)
+        im = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
+        Image.fromarray(im).save('Disp_L_'+str(index)+'.png')
+        # stereo_match(img, img1, 3, 30, index, disp_train_L[index])  # 6x6 local search kernel, 30 pixel search range
+        os.system("python Test_img.py --loadmodel pretrained_sceneflow.tar --no-cuda --index " + str(index) + " --leftimg " + left_path + " --rightimg " + right_path)
+        index = index + 1
+        # index = index + 1

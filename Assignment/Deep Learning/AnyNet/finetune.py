@@ -6,10 +6,12 @@ import torch.nn.parallel
 import torch.optim as optim
 import torch.utils.data
 import torch.nn.functional as F
+import torchvision
 import time
 from dataloader import KITTILoader as DA
 import utils.logger as logger
 import torch.backends.cudnn as cudnn
+from torchvision.utils import save_image
 from PIL import Image
 
 import models.anynet
@@ -188,17 +190,27 @@ def test(dataloader, model, log):
     model.eval()
     index = 0
     for batch_idx, (imgL, imgR, disp_L) in enumerate(dataloader):
-        imgL = imgL.float().cuda()
-        imgR = imgR.float().cuda()
-        disp_L = disp_L.float().cuda()
+        imgL = imgL.cuda() #.float()
+        imgR = imgR.cuda() #.float()
+        # Image.fromarray(disp_L).save('Disp_L_' + str(index) + '.png')
+        # Image.
+        # save_image(disp_L, 'Disp_L_' + str(index) + '.png')
+        torchvision.utils.save_image(disp_L, 'Disp_L_' + str(index) + '.png')
+        # torch.save()
+        disp_L = disp_L.cuda() #.float()
 
         with torch.no_grad():
             outputs = model(imgL, imgR)
-            Image.fromarray(disp_L).save('Disp_L_' + str(index) + '.png')
+            print(outputs)
             # save output here
             for x in range(stages):
-                output = torch.squeeze(outputs[x], 1)
-                Image.fromarray(output).save('Output_stage' + str(x) + '_' + index + '.png')
+                torchvision.utils.save_image(outputs[x], 'Output_stage' + str(x) + '_' + str(index) + '.png')
+                output = torch.squeeze(outputs[x])
+                output = output.data.cpu().numpy()
+                output = (output * 256).astype('uint16')
+                # output = Image.fromarray(output)
+                # Image.fromarray(output).save('Output_stage' + str(x) + '_' + index + '.png')
+                torchvision.utils.save_image(output, 'Output_stage' + str(x) + '_' + str(index) + '.png')
                 D1s[x].update(error_estimating(output, disp_L).item())
             index = index + 1
 
